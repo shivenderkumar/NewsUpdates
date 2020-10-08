@@ -10,8 +10,9 @@ import retrofit2.http.GET;
 
 public interface NewsApi {
     String BASE_URL = "http://newsapi.org/v2/";
+    String yourAPIKEY ="";
 
-    @GET("top-headlines?country=in&apiKey=be8f7ebe24a945b3bacb4cd5431ea605")
+    @GET("top-headlines?country=in&apiKey="+yourAPIKEY)
     Call<JsonObject> getNews();
 
 }
